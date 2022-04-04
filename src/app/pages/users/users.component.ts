@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'exads-users',
@@ -14,6 +15,7 @@ export class UsersComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // this.http.get(`localhost`);
   }
 
 }

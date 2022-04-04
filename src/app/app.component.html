@@ -1,1 +1,10 @@
-<router-outlet>new users</router-outlet>
+<router-outlet>
+<!--    <button (click)="getPosts()"></button>-->
+    <div *ngFor="let post of posts | async | keyvalue">
+        <ul>
+            <li>Name: {{ post.value.first_name }} </li>
+            <li>Email: {{ post.value.email }}</li>
+        </ul>
+    </div>
+</router-outlet>
+
