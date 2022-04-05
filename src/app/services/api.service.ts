@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { throwError } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ export class ApiService {
   }
 
   readonly ROOT_URL = 'http://localhost:3000/users';
+
   // users: any;
 
   getUsers() {
@@ -18,7 +20,10 @@ export class ApiService {
     return this.http.get(this.ROOT_URL, {headers})
       .pipe(
         map(response => {
-          return response.data.users;
+            return response.data.users;
+        }),
+        catchError(error => {
+          return throwError(error);
         })
       );
   }
