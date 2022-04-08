@@ -13,8 +13,6 @@ export class ApiService {
 
   readonly ROOT_URL = 'http://localhost:3000/users';
 
-  // users: any;
-
   getUsers() {
     const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
     return this.http.get(this.ROOT_URL, {headers})
