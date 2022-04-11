@@ -10,7 +10,7 @@ import { ApiService } from '../../services/api.service';
           <mat-card-content>
               <table>
                   <tr>
-                      <button mat-raised-button color="primary" routerLink="/users/create">Primary</button>
+                      <button mat-raised-button color="primary" routerLink="/users/create">Create User</button>
                   </tr>
                   <tr>
                       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
@@ -66,18 +66,19 @@ export class UsersComponent implements OnInit {
   users: any;
   isLoading = true;
   dataSource = null;
+  url: string;
 
   constructor(private apiService: ApiService) {
   }
 
   ngOnInit() {
     this.getUserData();
-
     // this.dataSource.paginator = this.paginator;
   }
 
   getUserData() {
-    this.users = this.apiService.getUsers().subscribe(
+    this.url = 'http://localhost:3000/users';
+    this.users = this.apiService.getUsers(this.url).subscribe(
       data => {
         this.isLoading = false;
         this.dataSource = data;

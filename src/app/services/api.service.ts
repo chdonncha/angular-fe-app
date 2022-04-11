@@ -11,16 +11,21 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
-  readonly ROOT_URL = 'http://localhost:3000/users';
-
-  getUsers() {
+  getUsers(url: string) {
     const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
-    return this.http.get(this.ROOT_URL, {headers})
+    return this.http.get(url, {headers})
       .pipe(
         map(({data}: {data: any}) => data.users),
         catchError(error => {
           return throwError(error);
         })
       );
+  }
+
+  createUser(url: string, userExample: {}) {
+    // const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
+    return this.http.post(url, userExample).toPromise().then(data => {
+      console.log(data);
+    });
   }
 }
