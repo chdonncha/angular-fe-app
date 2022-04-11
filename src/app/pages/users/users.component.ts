@@ -47,17 +47,17 @@ import { ApiService } from '../../services/api.service';
                           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                       </table>
                   </tr>
-
-                  <div *ngIf="isLoading"
-                       style="display: flex; justify-content: center; align-items: center; background: white;">
-                      <mat-progress-spinner
-                              color="primary"
-                              mode="indeterminate">
-                      </mat-progress-spinner>
-                  </div>
               </table>
           </mat-card-content>
       </mat-card>
+      <div *ngIf="isLoading"
+           style="display: flex; justify-content: center; align-items: center; background: white;">
+          <mat-progress-spinner
+                  color="primary"
+                  mode="indeterminate">
+          </mat-progress-spinner>
+      </div>
+
   `,
   styles: []
 })

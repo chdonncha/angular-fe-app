@@ -17,9 +17,7 @@ export class ApiService {
     const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
     return this.http.get(this.ROOT_URL, {headers})
       .pipe(
-        map(response => {
-            return response.data.users;
-        }),
+        map(({data}: {data: any}) => data.users),
         catchError(error => {
           return throwError(error);
         })

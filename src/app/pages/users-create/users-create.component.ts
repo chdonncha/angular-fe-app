@@ -39,9 +39,17 @@ import { Component, OnInit } from '@angular/core';
                       </tr>
                       <tr>
                           <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
-                              <button mat-raised-button>CANCEL</button>
-                              <button mat-raised-button>ADD NEW USER</button>
+
                           </mat-card-actions>
+                          <mat-grid-list cols="2 rowHeight="1:1">
+                              <mat-grid-tile>
+                                  <button mat-raised-button>CANCEL</button>
+                              </mat-grid-tile>
+                              <mat-grid-tile></mat-grid-tile>
+                              <mat-grid-tile>
+                                  <button mat-raised-button>ADD NEW USER</button>
+                              </mat-grid-tile>
+                          </mat-grid-list>
                       </tr>
                   </table>
               </form>
