@@ -3,33 +3,38 @@
         Add New User
     </mat-card-title>
     <mat-card-content>
-        <form>
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
             <table>
                 <tr>
                     <mat-form-field appearance="fill">
                         <mat-label>Username</mat-label>
-                        <input matInput>
+                        <div class="form-group">
+                            <input required matInput type="text" class="form-control" id="username"
+                                   placeholder="Enter username" formControlName="username" name="username">
+                        </div>
                     </mat-form-field>
                 </tr>
                 <tr>
                     <td>
                         <mat-form-field appearance="fill">
                             <mat-label>First Name</mat-label>
-                            <input matInput>
+                            <input required matInput type="text" class="form-control" id="first_name"
+                                   placeholder="Enter First Name" formControlName="first_name" name="first_name">
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field appearance="fill">
                             <mat-label>Last Name (Optional)</mat-label>
-                            <input matInput>
+                            <input matInput type="text" class="form-control" id="last_name"
+                                   placeholder="Enter Last Name" formControlName="last_name" name="last_name">
                         </mat-form-field>
                     </td>
                 </tr>
                 <tr>
                     <mat-form-field appearance="fill">
-                        <input matInput>
                         <mat-label>Email</mat-label>
-                        <input matInput>
+                        <input matInput type="text" class="form-control" id="email"
+                               placeholder="Enter Email" formControlName="email" name="email">
                     </mat-form-field>
                 </tr>
                 <tr>
@@ -41,8 +46,7 @@
                         </mat-grid-tile>
                         <mat-grid-tile></mat-grid-tile>
                         <mat-grid-tile>
-                            <!--                                  <button mat-raised-button type="button" (click)="createUser($event)">ADD NEW USER</button>-->
-                            <button mat-raised-button type="submit" (click)="createUser($event)">ADD NEW USER</button>
+                            <button mat-raised-button type="submit">ADD NEW USER</button>
                         </mat-grid-tile>
                         <mat-grid-tile></mat-grid-tile>
                     </mat-grid-list>
