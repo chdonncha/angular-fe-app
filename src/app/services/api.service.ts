@@ -22,9 +22,8 @@ export class ApiService {
       );
   }
 
-  createUser(url: string, userExample: {}) {
-    // const headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
-    return this.http.post(url, userExample).toPromise().then(data => {
+  createUser(url: string, params: {}) {
+    return this.http.post(url, params).toPromise().then(data => {
       console.log(data);
     });
   }
