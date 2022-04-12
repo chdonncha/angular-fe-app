@@ -10,13 +10,13 @@
                     <mat-paginator #paginator [pageSizeOptions]="[2, 4, 6]"
                                    showFirstLastButtons></mat-paginator>
 
-                    <!-- Username -->
+                    <!-- Username Column -->
                     <ng-container matColumnDef="username">
                         <th mat-header-cell *matHeaderCellDef> Username</th>
                         <td mat-cell *matCellDef="let element"> {{element.username}} </td>
                     </ng-container>
 
-                    <!-- Full Name -->
+                    <!-- Full Name Column -->
                     <ng-container matColumnDef="full_name">
                         <th mat-header-cell *matHeaderCellDef> Full Name</th>
                         <td mat-cell

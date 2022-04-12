@@ -50,22 +50,6 @@ export class UsersCreateComponent implements OnInit {
         id_status: 1,
       }
     };
-
     this.users = this.apiService.createUser(this.url, this.params);
-
-
-    // console.log(formData);
-
-    // this.userExample = {
-    //   "user": {
-    //     "first_name": "test1",
-    //     "last_name": "tester1",
-    //     "email": "test1@test.com",
-    //     "username": "test1",
-    //     "id_status": 1,
-    //   }
-    // };
-
   }
-
 }
