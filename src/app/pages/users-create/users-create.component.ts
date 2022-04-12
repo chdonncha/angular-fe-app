@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../../services/api.service";
-import { FormBuilder, FormControl, Validators } from "@angular/forms";
+import { FormBuilder } from "@angular/forms";
 
 @Component({
   selector: 'exads-users-create',
@@ -10,18 +10,12 @@ import { FormBuilder, FormControl, Validators } from "@angular/forms";
 export class UsersCreateComponent implements OnInit {
   url: string;
   users: any;
-  userExample: any;
   params: any;
   formGroup: any;
 
   constructor(
     private apiService: ApiService,
     private formBuilder: FormBuilder,
-    // public first_name: string,
-    // public last_name: string,
-    // public email: string,
-    // public username: string,
-    // public id_status: number
   ) {
     this.formGroup = this.formBuilder.group({
       username: '',
@@ -33,11 +27,6 @@ export class UsersCreateComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  // email= new FormControl('',[
-  //   Validators.required,
-  //   Validators.email
-  // ]);
 
   onSubmit(formData) {
     this.url = 'http://localhost:3000/users';
