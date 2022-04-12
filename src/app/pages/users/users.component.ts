@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-
-// import { HttpClient } from '@angular/common/http';
+import { MatTableDataSource, MatPaginator } from "@angular/material";
 
 @Component({
   selector: 'exads-users',
@@ -15,12 +14,13 @@ export class UsersComponent implements OnInit {
   dataSource = null;
   url: string;
 
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+
   constructor(private apiService: ApiService) {
   }
 
   ngOnInit() {
-    this.getUserData();
-    // this.dataSource.paginator = this.paginator;
+    this.loadUserPage();
   }
 
   getUserData() {
@@ -29,9 +29,15 @@ export class UsersComponent implements OnInit {
       data => {
         this.isLoading = false;
         this.dataSource = data;
+        this.dataSource = new MatTableDataSource(this.dataSource);
+        this.dataSource.paginator = this.paginator
       },
       error => this.isLoading = false
     );
   }
 
+  loadUserPage() {
+    this.isLoading = true;
+    this.getUserData();
+  }
 }
