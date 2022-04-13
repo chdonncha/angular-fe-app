@@ -34,7 +34,8 @@
                 <tr>
                     <mat-form-field appearance="fill">
                         <mat-label>Email</mat-label>
-                        <input matInput required email type="text" class="form-control" id="email"
+                        <input matInput required email type="email" class="form-control" id="email"
+                               pattern="^[^(\.)][a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"
                                placeholder="Enter Email" formControlName="email" name="email">
                     </mat-form-field>
                 </tr>
@@ -47,7 +48,7 @@
                         </mat-grid-tile>
                         <mat-grid-tile></mat-grid-tile>
                         <mat-grid-tile>
-                            <button mat-raised-button type="submit">ADD NEW USER</button>
+                            <button mat-raised-button type="submit" [disabled]="formGroup.invalid">ADD NEW USER</button>
                         </mat-grid-tile>
                         <mat-grid-tile></mat-grid-tile>
                     </mat-grid-list>

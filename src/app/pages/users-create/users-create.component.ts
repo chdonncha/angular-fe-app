@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../../services/api.service";
 import { FormBuilder } from "@angular/forms";
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'exads-users-create',
@@ -32,19 +32,19 @@ export class UsersCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  getUser(formData) {
+  onSubmit(formData) {
     this.submittedUsername = formData['username'];
     this.url = 'http://localhost:3000/users?username=' + this.submittedUsername;
     this.users = this.apiService.getUsers(this.url).subscribe(
       data => {
-        this.userData = data[0].username;
+        if (data.length > 0) {
+          this.userData = data[0].username;
+        }
+        this.processUser(formData);
       });
   }
 
-  onSubmit(formData) {
-
-    this.getUser(formData);
-
+  processUser(formData) {
     if (this.userData != formData['username']) {
       this.url = 'http://localhost:3000/users';
       this.params = {
@@ -57,6 +57,7 @@ export class UsersCreateComponent implements OnInit {
         }
       };
       this.users = this.apiService.createUser(this.url, this.params);
+      this._snackBar.open('User Successfully Created', "okay");
     } else if (this.userData === formData['username']) {
       this._snackBar.open('User Exists!', "okay");
     } else {
