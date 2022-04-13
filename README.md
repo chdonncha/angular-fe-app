@@ -40,9 +40,9 @@ $ npm run start-api
 
 * Improve error handling
 * Add username validation against if it’s available in the database
-    *How I would have approached it:
-        *Check if a result is returned when i put in the ID of new user trying to be added via a subscribe(), if there was a result I should return an error toast
-          Added Unit tests
+    * How I would have approached it:
+          * Check if a result is returned when i put in the ID of new user trying to be added via a subscribe(), if there was a result I should return an error toast
+            Added Unit tests
 * Added interfaces for the params on creating a user
 * Make a translation functionality as mentioned in the doc, can make a sheet with labels i.e. json keys(labels) with values as translations as reference then make a filter Translate custom pipe custom pipe  that will check the selected language stored in cache or cookie too then get the correct value on the associated labels. Using docs called en.json fr.json es.json etc…
 * Add a filter by system to filter on user details i.e. firstname, email. Username etc or filter by created after certain or before certain dates 
