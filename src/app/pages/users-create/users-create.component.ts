@@ -56,8 +56,9 @@ export class UsersCreateComponent implements OnInit {
           id_status: 1,
         }
       };
-      this.users = this.apiService.createUser(this.url, this.params);
-      this._snackBar.open('User Successfully Created', "okay");
+      this.users = this.apiService.createUser(this.url, this.params).subscribe(
+        this._snackBar.open('User Successfully Created', "okay")
+      );
     } else if (this.userData === formData['username']) {
       this._snackBar.open('User Exists!', "okay");
     } else {

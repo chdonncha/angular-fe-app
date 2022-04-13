@@ -23,8 +23,6 @@ export class ApiService {
   }
 
   createUser(url: string, params: {}) {
-    return this.http.post(url, params).toPromise().then(data => {
-      console.log(data);
-    });
+    return this.http.post(url, params)
   }
 }
