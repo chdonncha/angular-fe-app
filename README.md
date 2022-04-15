@@ -25,7 +25,8 @@ $ npm start
 ```
 4. Run the API app. By default it will run in `http://localhost:3000`
 ```
-$ npm run start-api
+$ npm run start-api![image_2](https://user-images.githubusercontent.com/8567795/163559508-7baf8ad1-4863-4601-9e5d-c721ab669d9c.png)
+
 ```
 
 ## Need more help?
@@ -46,3 +47,4 @@ $ npm run start-api
 * Added interfaces for the params on creating a user
 * Make a translation functionality as mentioned in the doc, can make a sheet with labels i.e. json keys(labels) with values as translations as reference then make a filter Translate custom pipe custom pipe  that will check the selected language stored in cache or cookie too then get the correct value on the associated labels. Using docs called en.json fr.json es.json etc…
 * Add a filter by system to filter on user details i.e. firstname, email. Username etc or filter by created after certain or before certain dates 
+* Unit testing
