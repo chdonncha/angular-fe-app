@@ -20,7 +20,7 @@ $ npm start
 ```
 4. Run the API app. By default it will run in `http://localhost:3000`
 ```
-$ npm run start-api![image_2](https://user-images.githubusercontent.com/8567795/163559508-7baf8ad1-4863-4601-9e5d-c721ab669d9c.png)
+$ npm run start-api
 
 ```
 
