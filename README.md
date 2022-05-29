@@ -1,11 +1,5 @@
 # fe-test-app
 =======
-# EXADS Frontend Test Project
-
-This project is intended to be used as a base for the EXADS Frontend Test. It includes:
-- Empty Angular 8 app with required dependencies for Angular Material and Ngx Datatable already set up.
-- API to support the frontend app.
-
 
 ## Getting started
 
@@ -37,7 +31,7 @@ $ npm run start-api![image_2](https://user-images.githubusercontent.com/8567795/
 
 ---
 
-## What I would have done had I more time
+## Todo
 
 * Improve error handling
 * Add username validation against if it’s available in the database
