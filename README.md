@@ -21,7 +21,6 @@ $ npm start
 4. Run the API app. By default it will run in `http://localhost:3000`
 ```
 $ npm run start-api
-
 ```
 
 ## Useful docs
