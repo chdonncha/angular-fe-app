@@ -1,7 +1,8 @@
 # fe-test-app
 =======
 
-## Getting started
+On local WSL located in:
+wsl$/Ubuntu/home/donncha/fe-test-app
 
 ### Prerequisites
 - Node 12+
