@@ -24,7 +24,7 @@ $ npm run start-api![image_2](https://user-images.githubusercontent.com/8567795/
 
 ```
 
-## Need more help?
+## Useful docs
 
 - Angular Material: see https://material.angular.io/
 - ngx-datatable: see https://github.com/swimlane/ngx-datatable
