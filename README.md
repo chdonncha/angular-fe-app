@@ -1,4 +1,4 @@
-# fe-test-app
+# angular_fe_app
 =======
 
 Personal project to learn the basics and experiment with Angular 2+ developement
