@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../../services/api.service";
 import { FormBuilder } from "@angular/forms";
-import { MatSnackBar } from '@angular/material/snack-bar';
+// import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'exads-users-create',
@@ -19,7 +19,7 @@ export class UsersCreateComponent implements OnInit {
   constructor(
     private apiService: ApiService,
     private formBuilder: FormBuilder,
-    private _snackBar: MatSnackBar,
+    // private snackBar: MatSnackBarModule,
   ) {
     this.formGroup = this.formBuilder.group({
       username: '',
@@ -57,12 +57,12 @@ export class UsersCreateComponent implements OnInit {
         }
       };
       this.users = this.apiService.createUser(this.url, this.params).subscribe(
-        this._snackBar.open('User Successfully Created', "okay")
+        // this.snackBar.open('User Successfully Created', "okay")
       );
     } else if (this.userData === formData['username']) {
-      this._snackBar.open('User Exists!', "okay");
+      // this._snackBar.open('User Exists!', "okay");
     } else {
-      this._snackBar.open('Something went wrong', "okay");
+      // this._snackBar.open('Something went wrong', "okay");
     }
   }
 }
