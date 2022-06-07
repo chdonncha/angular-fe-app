@@ -29,7 +29,6 @@ $ npm run start-api
 
 - Angular Material: see https://material.angular.io/
 - ngx-datatable: see https://github.com/swimlane/ngx-datatable
-- API docs: see https://documenter.getpostman.com/view/11918524/TzRNFAPs
 
 ---
 
