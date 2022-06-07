@@ -47,6 +47,6 @@ $ npm run start-api
 * Add a filter by system to filter on user details i.e. firstname, email. Username etc or filter by created after certain or before certain dates 
 * Unit testing
 
-current landing page design
+current landing page design (uses randomly generated data saved in the db .json)
 ![image](https://user-images.githubusercontent.com/8567795/172498601-352f0efd-a6ee-4a8a-bd40-a35d7420450a.png)
 
