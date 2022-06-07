@@ -1,6 +1,8 @@
 # fe-test-app
 =======
 
+Personal project to learn the basics and experiment with Angular 2+ developement
+
 On local WSL located in:
 wsl$/Ubuntu/home/donncha/fe-test-app
 
