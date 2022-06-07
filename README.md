@@ -3,6 +3,8 @@
 
 Personal project to learn the basics and experiment with Angular 2+ developement
 
+All Front-end code is created by me, though the express API setup was through an online example used for convenience of use.
+
 On local WSL located in:
 wsl$/Ubuntu/home/donncha/fe-test-app
 
@@ -34,7 +36,7 @@ $ npm run start-api
 
 ## Todo
 
-* Fix inital compile error (only solution to this so far is triggering a recompile through a code edit while server is up, then refresh and page works)
+* ~~Fix inital compile error (only solution to this so far is triggering a recompile through a code edit while server is up, then refresh and page works)~~
 * Improve error handling
 * Add username validation against if it’s available in the database
     * How I would have approached it:
