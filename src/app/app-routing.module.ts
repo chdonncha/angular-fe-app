@@ -5,6 +5,7 @@ import { UsersCreateComponent } from './pages/users-create/users-create.componen
 
 
 const routes: Routes = [
+    {path: '', pathMatch: 'full', redirectTo: 'users'},
     {path: 'users', component: UsersComponent},
     {path: 'users/create', component: UsersCreateComponent},
 ];
